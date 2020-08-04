@@ -2,10 +2,10 @@ package pow;
 
 public class Pow {
     public static void main(String[] args) {
-        System.out.println(pow(27,-3));
+        System.out.println(pow(27,3));
 
     }
-    public static double pow(double value, double powValue) {
+    public static double pow(double value, int powValue) {
         if(powValue==0) return 1;
         if(powValue>0) {
             if (powValue == 1) {
