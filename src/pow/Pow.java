@@ -2,27 +2,31 @@ package pow;
 
 public class Pow {
     public static void main(String[] args) {
-        System.out.println(pow(27, -3));
+        System.out.println(pow(6, -6));
 
     }
 
     public static double pow(double value, int powValue) {
-        if (powValue == 0) return 1;
-        if (powValue > 0) {
-            if (powValue == 1) {
-                return value;
-            } else {
-                return value * pow(value, powValue - 1);
-            }
-        } else {
+        double result = 1;
+        if(powValue ==0)
+            return 1;
+        if (powValue < 0){
             if (value == 0) throw new NullPointerException();
-            if (powValue == -1) {
-                return 1 / value;
-            } else {
-                return 1 / value * pow(value, powValue + 1);
-            }
-
+            powValue = - powValue;
+            value = 1/value;
         }
-    }
 
+        if(powValue ==1)
+            return value;
+        result = pow(value, powValue/2);
+        result *= result;
+
+        if(powValue%2!=0){
+             result *= value;
+        }
+        return result;
+
+    }
 }
+
+

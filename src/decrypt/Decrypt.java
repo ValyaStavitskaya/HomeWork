@@ -17,7 +17,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Decrypt {
     public static void main(String[] args) {
 
-        CopyOnWriteArrayList list = new CopyOnWriteArrayList();
+
 //        for (int i = 0; i <308915776 ; i++) {
 //            String s = generateRandomWord(6);
 //            map.put(md5Custom(s),s);
@@ -32,15 +32,106 @@ public class Decrypt {
               //  break;
             //}
         //}
+
+
         try (BufferedReader reader = new BufferedReader(
+
                 new InputStreamReader(
-                        new FileInputStream("D:\\weakpass_2a\\weakpass_2a~\\weakpass_2a"), StandardCharsets.UTF_8))){
+                        new FileInputStream("D:\\weakpass_2a\\weakpass_2a"), StandardCharsets.UTF_8))){
             String line;
             while ((line = reader.readLine()) != null) {
-                if (md5Custom(line).equals("5f50dfa5385e66ce46ad8d08a9c9be68")){
-                System.out.println(line);
-                    System.out.println(LocalTime.now());
-                break;}
+                DTread one = new DTread(line);
+                Thread thread1 = new Thread(one);
+                Thread thread2 = new Thread(one);
+                Thread thread3 = new Thread(one);
+                Thread thread4 = new Thread(one);
+                Thread thread5 = new Thread(one);
+                Thread thread6 = new Thread(one);
+                Thread thread7 = new Thread(one);
+                Thread thread8 = new Thread(one);
+                Thread thread9 = new Thread(one);
+                Thread thread10 = new Thread(one);
+//                Thread thread11 = new Thread(one);
+//                Thread thread12 = new Thread(one);
+//                Thread thread13 = new Thread(one);
+//                Thread thread14 = new Thread(one);
+//                Thread thread15 = new Thread(one);
+//                Thread thread16 = new Thread(one);
+//                Thread thread17 = new Thread(one);
+//                Thread thread18 = new Thread(one);
+//                Thread thread19 = new Thread(one);
+//                Thread thread20 = new Thread(one);
+//                Thread thread21 = new Thread(one);
+//                Thread thread22 = new Thread(one);
+//                Thread thread23 = new Thread(one);
+//                Thread thread24 = new Thread(one);
+//                Thread thread25 = new Thread(one);
+//                Thread thread26 = new Thread(one);
+//                Thread thread27 = new Thread(one);
+//                Thread thread28 = new Thread(one);
+//                Thread thread29 = new Thread(one);
+//                Thread thread30 = new Thread(one);
+//                Thread thread31 = new Thread(one);
+//                Thread thread32 = new Thread(one);
+//                Thread thread33 = new Thread(one);
+//                Thread thread34 = new Thread(one);
+//                Thread thread35 = new Thread(one);
+//                Thread thread36 = new Thread(one);
+//                Thread thread37 = new Thread(one);
+//                Thread thread38 = new Thread(one);
+//                Thread thread39 = new Thread(one);
+
+
+                thread1.start();
+                thread2.start();
+               thread3.start();
+                thread4.start();
+                thread5.start();
+                thread6.start();
+                thread7.start();
+                thread8.start();
+                thread9.start();
+                thread10.start();
+//                thread11.start();
+//                thread12.start();
+//                thread13.start();
+//                thread14.start();
+//                thread15.start();
+//                thread16.start();
+//                thread17.start();
+//                thread18.start();
+//                thread19.start();
+//                thread20.start();
+//                thread21.start();
+//                thread22.start();
+//                thread23.start();
+//                thread24.start();
+//                thread25.start();
+//                thread26.start();
+//                thread27.start();
+//                thread28.start();
+//                thread29.start();
+//                thread30.start();
+//                thread31.start();
+//                thread32.start();
+//                thread33.start();
+//                thread34.start();
+//                thread35.start();
+//                thread36.start();
+//                thread37.start();
+//                thread38.start();
+//                thread39.start();
+//                thread40.start();
+//                thread41.start();
+//                thread42.start();
+//                thread43.start();
+//                thread44.start();
+//                thread45.start();
+//                thread46.start();
+//                thread47.start();
+//                thread48.start();
+//                thread49.start();
+//                thread50.start();
 
             }
         } catch (IOException e) {
@@ -50,6 +141,23 @@ public class Decrypt {
 
 
 
+    }
+    static class DTread implements Runnable{
+        String line;
+        public DTread(String line) {
+            this.line = line;
+        }
+
+        @Override
+        public void run() {
+            if (md5Custom(line).equals("5f50dfa5385e66ce46ad8d08a9c9be68")) {
+                System.out.println(line);
+                System.out.println(LocalTime.now());
+
+            }
+
+
+        }
     }
 
     static String generateRandomWord(int wordLength) {
@@ -61,6 +169,7 @@ public class Decrypt {
         }
         return sb.toString();
     }
+
 
     public static String md5Custom(String st) {
         MessageDigest messageDigest = null;
