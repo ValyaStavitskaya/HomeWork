@@ -26,9 +26,10 @@ public class HomeWork26 {
 
     public static Double SumSquares(List<Double> numbers) {
         Double result = 0.0;
-        for (Double a : numbers)
+        for (Double a : numbers) {
             if (a > 0 && a % 2 == 0)
                 result += a * a;
+        }
         return result;
 
     }
