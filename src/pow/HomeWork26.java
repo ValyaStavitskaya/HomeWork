@@ -8,9 +8,10 @@ public class HomeWork26 {
         List<Double> numbers = new ArrayList<>();
         numbers.add(1.0);
         numbers.add(-5.0);
-        numbers.add(-2.0);
-        numbers.add(6.0);
+        numbers.add(4.0);
+        numbers.add(6.9);
         System.out.println(SumSquares(numbers));
+        System.out.println(mean(numbers));
 
     }
 
@@ -27,7 +28,7 @@ public class HomeWork26 {
         Double result = 0.0;
         for (Double a : numbers)
             if (a > 0 && a % 2 == 0)
-                result +=a*a;
+                result += a * a;
         return result;
 
     }
